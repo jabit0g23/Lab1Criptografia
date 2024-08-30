@@ -39,19 +39,11 @@ def identificar_mensaje_probable(mensajes):
     return mensaje_probable
 
 def main():
-    # Cambia la ruta del archivo a la ubicación de tu archivo .pcapng
     archivo_pcap = "./captura.pcapng"
-    
-    # Carga el mensaje cifrado desde el archivo de captura
     mensaje_cifrado = cargar_paquetes(archivo_pcap)
-
-    # Descifra probando todos los desplazamientos posibles
     mensajes_descifrados = descifrar_todos_los_desplazamientos(mensaje_cifrado)
-
-    # Identifica el mensaje más probable
     desplazamiento_probable, mensaje_probable = identificar_mensaje_probable(mensajes_descifrados)
 
-    # Imprime todos los mensajes descifrados y resalta el más probable
     for desplazamiento, mensaje in mensajes_descifrados:
         if desplazamiento == desplazamiento_probable:
             print(Fore.GREEN + f"Desplazamiento {desplazamiento}: {mensaje}" + Style.RESET_ALL)
