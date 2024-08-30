@@ -14,9 +14,7 @@ def cifrado_cesar(texto, desplazamiento):
             resultado += caracter
     return resultado
 
-# Ejemplo de uso
 
-"""
 texto_original = sys.argv[1] 
 desplazamiento = int(sys.argv[2])
 
@@ -26,4 +24,3 @@ print("Texto cifrado:", texto_cifrado)
 # Para descifrar
 texto_descifrado = cifrado_cesar(texto_cifrado, -desplazamiento)
 print("Texto descifrado:", texto_descifrado)
-"""
