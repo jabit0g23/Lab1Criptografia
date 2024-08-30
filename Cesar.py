@@ -1,3 +1,5 @@
+import sys
+
 def cifrado_cesar(texto, desplazamiento):
     resultado = ""
     for caracter in texto:
@@ -13,11 +15,15 @@ def cifrado_cesar(texto, desplazamiento):
     return resultado
 
 # Ejemplo de uso
-texto_original = "criptografia y seguridad en redes 2024"
-desplazamiento = 9
+
+"""
+texto_original = sys.argv[1] 
+desplazamiento = int(sys.argv[2])
+
 texto_cifrado = cifrado_cesar(texto_original, desplazamiento)
 print("Texto cifrado:", texto_cifrado)
 
 # Para descifrar
 texto_descifrado = cifrado_cesar(texto_cifrado, -desplazamiento)
 print("Texto descifrado:", texto_descifrado)
+"""
